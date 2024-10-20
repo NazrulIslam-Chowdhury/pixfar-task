@@ -8,8 +8,6 @@ import { useSearchProductsQuery } from "../redux/apiSlice";
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { data } = useSearchProductsQuery(searchTerm);
-
-  // cart items
   const cart = useSelector(
     (state: { cart: CartState }) => state.cart.cartItems
   );
@@ -19,10 +17,9 @@ const SearchBar = () => {
     (prev, next) => (prev += next.price * next.quantity),
     0
   );
+
+  // total cart items
   const totalProduct = cart?.reduce((prev, next) => (prev += next.quantity), 0);
-  // console.log(cart);
-  // console.log(searchTerm);
-  console.log(data);
 
   return (
     <main className="flex items-center justify-between gap-10 py-4 px-1 md:px-5 fixed top-0 w-full bg-white shadow-md">
@@ -37,9 +34,16 @@ const SearchBar = () => {
         {data?.length > 0 && (
           <div className="absolute top-14 w-full h-96 overflow-y-auto bg-gray-50 shadow-md border-[1px] border-gray-400 rounded-md space-y-4">
             {data?.map((product: any) => (
-              <div key={product?.id} className="flex flex-col md:flex-row gap-[30%] p-4">
+              <div
+                key={product?.id}
+                className="flex flex-col md:flex-row gap-[30%] p-4"
+              >
                 <div className="md:w-96 md:h-40">
-                  <img src={product?.image} alt={product?.title} className="w-full h-full"/>
+                  <img
+                    src={product?.image}
+                    alt={product?.title}
+                    className="w-full h-full"
+                  />
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="font-bold">{product?.title}</p>

@@ -33,7 +33,6 @@ const ProductCard = ({ product }: ProductProps) => {
     );
   };
 
-  // console.log(productQuantity);
 
   return (
     <main className="product-card border-[1px] border-gray-400 rounded-md p-2 lg:h-[600px] cursor-pointer">

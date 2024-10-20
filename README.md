@@ -27,4 +27,8 @@ This is a simple product display e-commerce application that allows users to bro
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
+2. **Run:**
+   ```bash
+   npm install
+   npm run dev
    ```

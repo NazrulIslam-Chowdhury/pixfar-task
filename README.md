@@ -27,8 +27,20 @@ This is a simple product display e-commerce application that allows users to bro
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
-2. **Run:**
+2. **Run on the terminal:**
    ```bash
    npm install
    npm run dev
    ```
+## 3. Explanation of Key Architectural Choices
+
+### Redux Toolkit & Redux Persist:
+The app's state management is handled with Redux Toolkit, simplifying the logic for actions and reducers. This makes it easier to manage the app’s global state, especially for the cart functionality. Redux Persist ensures that cart data is saved to local storage, so users can retain their cart items even after refreshing or closing the browser.
+
+### Tailwind CSS:
+For styling, Tailwind CSS is used to create a responsive and modern interface. Its utility-first approach allows for rapid UI development without writing a lot of custom CSS, promoting consistency and reusability across components.
+
+### React Icons & React Hot Toast:
+React Icons enhances the visual appearance of buttons and interactive elements with vector icons, providing a cleaner look.
+React Hot Toast is integrated for user feedback, enabling non-intrusive notifications when adding items to the cart or performing other actions.
+This combination of libraries ensures the app is efficient, responsive, and user-friendly, while also maintaining state persistence and a clean, modern UI.

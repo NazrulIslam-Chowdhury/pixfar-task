@@ -1,50 +1,30 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# E-Commerce Product Display App
 
-Currently, two official plugins are available:
+## 1. Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a simple product display e-commerce application that allows users to browse products, add them to a cart, and manage their cart. The app is built with modern web technologies, including React for UI, Redux Toolkit for state management, and Tailwind CSS for styling. It features smooth and intuitive UX using React Icons for visual enhancements and React Hot Toast for user feedback notifications. Redux Persist is used to maintain cart state even after refreshing the page.
 
-## Expanding the ESLint configuration
+### Key Features:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Browse and view products
+- Add products to the cart
+- Persistent cart state
+- Responsive design with Tailwind CSS
+- Feedback and notifications via React Hot Toast
 
-- Configure the top-level `parserOptions` property like this:
+## 2. Steps to Run the App Locally
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) installed
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Steps:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```

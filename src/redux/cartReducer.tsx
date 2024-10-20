@@ -31,23 +31,18 @@ const cartSlice = createSlice({
       const existingItem = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
-      if (existingItem) {
+      if (existingItem && existingItem.quantity > 0) {
         existingItem.quantity += action.payload.quantity;
       } else {
-        state.cartItems.push({ ...action.payload, quantity: 1 });
+        state.cartItems.push({
+          ...action.payload,
+          quantity: action.payload.quantity,
+        });
       }
       toast.success("Product added to cart");
-    },
-    removeFromCart: (state, action: PayloadAction<number>) => {
-      state.cartItems = state.cartItems.filter(
-        (item) => item.id !== action.payload
-      );
-    },
-    clearCart: (state) => {
-      state.cartItems = [];
     },
   },
 });
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart } = cartSlice.actions;
 export default cartSlice.reducer;

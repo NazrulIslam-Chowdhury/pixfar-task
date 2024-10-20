@@ -27,7 +27,7 @@ This is a simple product display e-commerce application that allows users to bro
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/NazrulIslam-Chowdhury/pixfar-task.git
    cd your-repo
 2. **Run on the terminal:**
    ```bash

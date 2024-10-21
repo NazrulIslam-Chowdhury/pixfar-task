@@ -36,7 +36,10 @@ This is a simple product display e-commerce application that allows users to bro
    npm install
    npm run dev
    ```
-
+or. **Run on the terminal:**
+   ```bash
+   docker run -p 3000:3000 pixfar-task
+   ```
 ## 3. Key Architectural Choices
 
 ### Redux Toolkit & Redux Persist:

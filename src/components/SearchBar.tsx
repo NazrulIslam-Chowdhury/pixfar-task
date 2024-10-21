@@ -4,6 +4,7 @@ import { BsCart4 } from "react-icons/bs";
 import { AiOutlineDollar } from "react-icons/ai";
 import { useState } from "react";
 import { useSearchProductsQuery } from "../redux/apiSlice";
+import { ProductProps } from "../types/types";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -33,7 +34,7 @@ const SearchBar = () => {
         />
         {data?.length > 0 && (
           <div className="absolute top-14 w-full h-96 overflow-y-auto bg-gray-50 shadow-md border-[1px] border-gray-400 rounded-md space-y-4">
-            {data?.map((product: any) => (
+            {data?.map((product: ProductProps) => (
               <div
                 key={product?.id}
                 className="flex flex-col md:flex-row gap-[30%] p-4"

@@ -2,23 +2,10 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartReducer";
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { ProductProps } from "../types/types";
 
-interface ProductProps {
-  product: {
-    id: number;
-    category: string;
-    image: string;
-    title: string;
-    description: string;
-    price: number;
-    rating: {
-      rate: number;
-      count: number;
-    };
-  };
-}
 
-const ProductCard = ({ product }: ProductProps) => {
+const ProductCard = ({ product }: { product: ProductProps }) => {
   const [productQuantity, setProductQuantity] = useState(1);
   const dispatch = useDispatch();
   const { category, image, title, description, price, rating } = product;
@@ -33,7 +20,6 @@ const ProductCard = ({ product }: ProductProps) => {
     );
   };
 
-
   return (
     <main className="product-card border-[1px] border-gray-400 rounded-md p-2 lg:h-[600px] cursor-pointer">
       <div className="h-[180px] md:h-[50%]">
@@ -44,7 +30,7 @@ const ProductCard = ({ product }: ProductProps) => {
         <p className="line-clamp-3">{description}</p>
         <p className="font-bold">Price: ${price}</p>
         <p>
-          Rating: {rating.rate} stars ({rating.count} reviews)
+          Rating: {rating?.rate} stars ({rating?.count} reviews)
         </p>
         <p>Category:{category}</p>
       </div>

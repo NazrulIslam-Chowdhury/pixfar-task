@@ -2,6 +2,9 @@
 
 # E-Commerce Product Display App
 
+## Live Preview
+   - (https://pixfar-task.vercel.app/)
+
 ## 1. Project Overview
 
 This is a simple product display e-commerce application that allows users to browse products, add them to a cart, and manage their cart. The app is built with modern web technologies, including React for UI, Redux Toolkit for state management, and Tailwind CSS for styling. It features smooth and intuitive UX using React Icons for visual enhancements and React Hot Toast for user feedback notifications. Redux Persist is used to maintain cart state even after refreshing the page.

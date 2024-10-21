@@ -1,17 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
+import { ProductProps } from "../types/types";
 
-interface CartItem {
-  id: number;
-  category: string;
-  image: string;
-  title: string;
-  description: string;
-  price: number;
-  rating: {
-    rate: number;
-    count: number;
-  };
+interface CartItem extends ProductProps {
   quantity: number;
 }
 

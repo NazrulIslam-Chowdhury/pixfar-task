@@ -1,4 +1,5 @@
 import { useGetProductsQuery } from "../redux/apiSlice";
+import { ProductProps } from "../types/types";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 
@@ -29,7 +30,7 @@ const Product = () => {
   if (error) return <p>Error loading items</p>;
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-24 lg:mx-5 mx-2">
-      {data?.map((product: any) => (
+      {data?.map((product: ProductProps) => (
         <ProductCard key={product?.id} product={product} />
       ))}
       {isFetching && <p>Loading more...</p>}

@@ -8,6 +8,7 @@ This is a simple product display e-commerce application that allows users to bro
 
 ### Key Features:
 
+- Dockerized.
 - Browse and view products.
 - Add products to the cart.
 - Search product by category name.
@@ -34,13 +35,14 @@ This is a simple product display e-commerce application that allows users to bro
    npm install
    npm run dev
    ```
-## 3. Explanation of Key Architectural Choices
+
+## 3. Key Architectural Choices
 
 ### Redux Toolkit & Redux Persist:
 The app's state management is handled with Redux Toolkit, simplifying the logic for actions and reducers. This makes it easier to manage the app’s global state, especially for the cart functionality. Redux Persist ensures that cart data is saved to local storage, so users can retain their cart items even after refreshing or closing the browser.
 
 ### RTK query:
-RTK is used for data fetching, searching product and infinite scrolling. 
+RTK query is used for data fetching, searching product and infinite scrolling. 
 
 ### Tailwind CSS:
 For styling, Tailwind CSS is used to create a responsive and modern interface. Its utility-first approach allows for rapid UI development without writing a lot of custom CSS, promoting consistency and reusability across components.
